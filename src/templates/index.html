@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plantar Fasciitis Prediction</title>
+</head>
+<style>
+    #wrapper{
+        text-align: center;
+    }
+</style>
+
+<body>
+<div id="wrapper">
+    <h1>Input Form</h1>
+    <form action="/" method="post">
+        <label>ID: </label>
+        <input type="number" name="ID" required><br><br>
+
+        <label>gender:</label><br>
+        <input type="radio" name="gender" value="0" required> 男<br>
+        <input type="radio" name="gender" value="1" required> 女<br><br>
+
+        <label>weight: </label>
+        <input type="number" name="weight" required><br><br>
+
+        <label>height: </label>
+        <input type="number" name="height" required><br><br>
+
+        <label>bmi: </label>
+        <input type="number" name="bmi" required><br><br>
+
+        <label>period: </label>
+        <input type="number" name="period" required><br><br>
+
+        <label>Sports History:</label><br>
+        <input type="radio" name="sports_history" value="0" required> 無<br>
+        <input type="radio" name="sports_history" value="1" required> 有<br><br>
+
+        <label>steroid:</label><br>
+        <input type="radio" name="steroid" value="0" required> 無<br>
+        <input type="radio" name="steroid" value="1" required> 有<br><br>
+
+        <label>calcaneal_spur:</label><br>
+        <input type="radio" name="calcaneal_spur" value="0" required> 無<br>
+        <input type="radio" name="calcaneal_spur" value="1" required> 有<br><br>
+
+        <label>thickness: </label>
+        <input type="number" name="thickness" required><br><br>
+
+        <label>blood_flow:</label><br>
+        <input type="radio" name="blood_flow" value="0" required> 無<br>
+        <input type="radio" name="blood_flow" value="1" required> 有<br><br>
+
+        <label>d_flex: </label>
+        <input type="number" name="d_flex" required><br><br>
+
+        <label>p_flex: </label>
+        <input type="number" name="p_flex" required><br><br>
+
+        <label>mp_ex: </label>
+        <input type="number" name="mp_ex" required><br><br>
+
+        <label>pre_vas: </label>
+        <input type="number" name="pre_vas" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <p>{{ messages[0] }}</p>
+        {% endif %}
+    {% endwith %}
+</div>
+</body>
+</html>

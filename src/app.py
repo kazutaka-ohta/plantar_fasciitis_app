@@ -8,7 +8,7 @@ from openpyxl import Workbook
 
 def predict(x):
     # 学習済みモデル（predict.pkl）を読み込み
-    model = joblib.load('./src/predict.pkl')
+    model = joblib.load('predict.pkl')
     x = x.reshape(1,-1)
     pred_data = model.predict(x)
     return pred_data

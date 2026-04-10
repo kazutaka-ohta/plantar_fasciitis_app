@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charaset="UTF-8">
+        <title>plantar data</title>
+        <p>患者データ</p>
+    </head>
+    <body>
+        <h1>足底腱膜患者</h1>
+        <form method="post" action="{{ url_for('register') }}">
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>年齢</th>
+                    <th>性別</th>
+                    <th>体重</th>
+                    <th>身長</th>
+                    <th>BMI</th>
+                    <th>罹患期間</th>
+                    <th>スポーツ歴</th>
+                    <th>ステロイドの使用</th>
+                    <th>踵骨棘の有無</th>
+                    <th>足底腱膜の厚さ</th>
+                    <th>血流の有無</th>
+                    <th>背屈可動域</th>
+                    <th>底屈可動域</th>
+                    <th>MP関節伸展可動域</th>
+                    <th>介入前のVAS</th>
+                </tr>
+                <tr>
+                    <td><input type="float" name="ID"></td>
+                    <td><input type="float" name="age"></td>
+                    <td><input type="float" name="gender"></td>
+                    <td><input type="float" name="weight"></td>
+                    <td><input type="float" name="height"></td>
+                    <td><input type="float" name="bmi"></td>
+                    <td><input type="float" name="period"></td>
+                    <td><input type="float" name="sports_history"></td>
+                    <td><input type="float" name="steroid"></td>
+                    <td><input type="float" name="calcaneal_spur"></td>
+                    <td><input type="float" name="thickness"></td>
+                    <td><input type="float" name="blood_flow"></td>
+                    <td><input type="float" name="d_flex"></td>
+                    <td><input type="float" name="p_flex"></td>
+                    <td><input type="float" name="mp_ex"></td>
+                    <td><input type="float" name="pre_vas"></td>
+                </tr>
+            </table>
+            <input type="submit" value="登録">
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>年齢</th>
+                    <th>性別</th>
+                    <th>体重</th>
+                    <th>身長</th>
+                    <th>BMI</th>
+                    <th>罹患期間</th>
+                    <th>スポーツ歴</th>
+                    <th>ステロイドの使用</th>
+                    <th>踵骨棘の有無</th>
+                    <th>足底腱膜の厚さ</th>
+                    <th>血流の有無</th>
+                    <th>背屈可動域</th>
+                    <th>底屈可動域</th>
+                    <th>MP関節伸展可動域</th>
+                    <th>介入前のVAS</th>
+                </tr>
+                {% for plantar in plantars %}
+                <tr>
+                    <td>{{plantar.ID}}</td>
+                    <td>{{plantar.age}}</td>
+                    <td>{{plantar.gender}}</td>
+                    <td>{{plantar.weight}}</td>
+                    <td>{{plantar.height}}</td>
+                    <td>{{plantar.bmi}}</td>
+                    <td>{{plantar.period}}</td>
+                    <td>{{plantar.sports_history}}</td>
+                    <td>{{plantar.steroid}}</td>
+                    <td>{{plantar.calcaneal_spur}}</td>
+                    <td>{{plantar.thickness}}</td>
+                    <td>{{plantar.blood_flow}}</td>
+                    <td>{{plantar.d_flex}}</td>
+                    <td>{{plantar.p_flex}}</td>
+                    <td>{{plantar.mp_ex}}</td>
+                    <td>{{plantar.pre_vas}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+                <br>
+        </form>
+    </body>
+</html>

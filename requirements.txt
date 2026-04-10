@@ -1,0 +1,11 @@
+flask
+wtforms
+numpy
+pandas
+openpyxl
+scikit-learn
+joblib
+dash
+dash-bootstrap-components
+plotly
+anywidget

@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Environment
+.env
+.env.local
+*.env
+
+# Database
+database.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Secret keys
+secrets.json
+config.local.py
+
+# Auto-generated data files
+data.xlsx
+database.db
+*.db
+
+# PostgreSQL logs (無関係)
+pg_upgrade_*.log
+
+# Unused data files
+plantar_fasciitis_data.xlsx
+plantar_fasciitis_data_値.xlsx
